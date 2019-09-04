@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.0] - 2019-09-04
+
+### Added
+
+- [.gitignore](.gitignore) file.
+- [VERSION](VERSION) file.
+
+### Removed
+
+- [package.json](package.json) file.
+- [Procfile](Procfile) file.
+
 ## [1.0.0] - 2019-09-02
 
 ### Added

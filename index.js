@@ -1,6 +1,7 @@
 const fs=require('fs')
 const {Client}=require('discord.js')
 const client=new Client()
+const config=require('./config.json')
 const help=require('./commands/other/help')
 const info=require('./commands/other/info')
 const clear=require('./commands/other/clear')
@@ -11,18 +12,18 @@ const unmute=require('./commands/moderation/unmute')
 const unban=require('./commands/moderation/unban')
 
 client.on('guildMemberAdd',async member=>{
-	const channel=member.guild.channels.find(ch=>ch.id===process.env.entryChannelID);
+	const channel=member.guild.channels.find(ch=>ch.id===config.entryChannelID);
 	if(!channel)return;
 	channel.send(`Cześć **${member.user.tag}**, baw się dobrze:hugging: :tada:`);
 });
 client.on('guildMemberRemove',async member=>{
-	const channel=member.guild.channels.find(ch=>ch.id===process.env.exitChannelID);
+	const channel=member.guild.channels.find(ch=>ch.id===config.exitChannelID);
 	if(!channel)return;
 	channel.send(`**${member.user.tag}** zjadł zgniłego ziemniaka i sobie poszedł :frowning2:`);
 });
 client.on('message',async message=>{
 	if(!message.guild)return;
-	if(message.content[0]===process.env.commandPrefix){
+	if(message.content[0]===config.commandPrefix){
 		const content=message.content.slice(1).split(' ');
 		const command=content[0];
 		const args=content.slice(1);
@@ -55,4 +56,4 @@ client.on('message',async message=>{
 	}
 });
 
-client.login(process.env.clientToken);
+client.login(config.clientToken);
