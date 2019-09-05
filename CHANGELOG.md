@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.0] - 2019-09-05
+
+### Changed
+
+##### [index.js](index.js)
+
+- Module loading function.
+
 ## [1.1.0] - 2019-09-04
 
 ### Added

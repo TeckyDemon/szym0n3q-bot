@@ -1,5 +1,5 @@
 module.exports={
-	run:async(message)=>{
+	run:async(client,message,args)=>{
 		message.channel.send(`\`\`\`
 			!mute użytkownik powód - wycisza użytkownika
 			!unmute użytkownik - odcisza użytkownika

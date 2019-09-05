@@ -1,7 +1,7 @@
 const {RichEmbed}=require("discord.js")
 
 module.exports={
-	run:async(message,args)=>{
+	run:async(client,message,args)=>{
 		if(!message.member.hasPermission(['MANAGE_MESSAGES','ADMINISTRATOR']))
 			return message.channel.send('```Nie możesz użyć tej komendy.```')
 		message.channel.bulkDelete(args[0]||100).then(()=>{
