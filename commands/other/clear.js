@@ -1,7 +1,7 @@
 const {RichEmbed}=require("discord.js")
 
 module.exports={
-	run:async(client,message,args)=>{
+	run:async(client,database,config,message,args)=>{
 		if(!message.member.hasPermission(['MANAGE_MESSAGES','ADMINISTRATOR']))
 			return message.channel.send('```Nie możesz użyć tej komendy.```')
 		message.channel.bulkDelete(args[0]||100).then(()=>{
@@ -9,7 +9,7 @@ module.exports={
 				.setColor(0x00FF00)
 				.setTitle(`Wiadomości zostały usunięte.`)
 				.addField('Przez:',message.author.tag)
-			);
+			)
 		}).catch(err=>console.log(err))
 	}
 }

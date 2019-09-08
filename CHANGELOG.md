@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.0.0] - 2019-09-08
+
+### Added
+
+- [commands/moderation/warn.js](commands/moderation/warn.js) file.
+
+##### [index.js](index.js)
+
+- Support for database
+
+### Fixed
+
+##### [commands](commands)
+
+- Some critical bugs.
+
 ## [1.2.0] - 2019-09-05
 
 ### Changed

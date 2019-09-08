@@ -1,7 +1,7 @@
 const numberToWords=require('number-to-words')
 
 module.exports={
-	run:async(client,message,args)=>{
+	run:async(client,database,config,message,args)=>{
 		const content=args.join(' ')
 			.toLowerCase()
 			.replace('ą','a')
@@ -11,21 +11,21 @@ module.exports={
 			.replace('ń','n')
 			.replace('ó','o')
 			.replace('ś','s')
-			.replace(/[źż]/g,'z');
+			.replace(/[źż]/g,'z')
 		switch(content){
 			case 'ok':
-				message.channel.send(':ok:');
+				message.channel.send(':ok:')
 				break;
 			case 'abc':
-				message.channel.send(':abc:');
+				message.channel.send(':abc:')
 				break;
 			case 'abcd':
-				message.channel.send(':abcd:');
+				message.channel.send(':abcd:')
 				break;
 			default:
 				message.channel
 					.send(content.split('')
-					.map(x=>x==' '?'\t':/^\d+$/.test(x)?`:${numberToWords.toWords(x)}:`:`:regional_indicator_${x}:`).join(''));
+					.map(x=>x==' '?'\t':/^\d+$/.test(x)?`:${numberToWords.toWords(x)}:`:`:regional_indicator_${x}:`).join(''))
 		}
 	}
 }
