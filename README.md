@@ -29,17 +29,20 @@
 
 ## Documentation
 
-| Command                   | Description                    |
-| :------------------------ | :----------------------------- |
-| !ban **user** **reason**  | Bans **user** for **reason**.  |
-| !kick **user** **reason** | Kicks **user** for **reason**. |
-| !mute **user** **reason** | Mutes **user** for **reason**. |
-| !unban **user**           | Unbans **user**.               |
-| !unmute **user**          | Unmutes **user**.              |
-| !warn **user** **reason** | Warns **user** for **reason**. |
-| !clear **N**              | Clears **N** messages.         |
-| !help                     | Shows help message.            |
-| !info **text**            | Prints **text** using emojis.  |
+| Command                   | Description                         |
+| :------------------------ | :---------------------------------- |
+| !ban **user** **reason**  | Bans **user** for **reason**.       |
+| !kick **user** **reason** | Kicks **user** for **reason**.      |
+| !mute **user** **reason** | Mutes **user** for **reason**.      |
+| !unban **user**           | Unbans **user**.                    |
+| !unmute **user**          | Unmutes **user**.                   |
+| !unwarn **user** **N**    | Removes **N** warnings of **user**. |
+| !warn **user** **reason** | Warns **user** for **reason**.      |
+| !clear **N**              | Clears **N** messages.              |
+| !help                     | Shows help message.                 |
+| !info **text**            | Prints **text** using emojis.       |
+| !dbsave                   | Saves database.                     |
+| !dbload                   | Loads database.                     |
 
 ## Authors
 

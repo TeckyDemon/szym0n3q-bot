@@ -8,11 +8,11 @@ module.exports={
 		if(!member)
 			return message.channel.send('```Nie znaleziono użytkownika do wyrzucenia.\nUżycie: !kick użytkownik powód```')
 		const reason=args.slice(1).join(' ')||'Brak'
-		member.send(`Cześć, zostałeś wyrzucony z **${message.guild.name}**.\nPowód: ${reason}.`)
+		await member.send(`Cześć, zostałeś wyrzucony z **${message.guild.name}**.\nPrzez: **${message.author.tag}**\nPowód: **${reason}**.`).catch(()=>{})
 		member.kick(reason).then(()=>{
 			message.channel.send(new RichEmbed()
-				.setColor(0xFFFF00)
-				.setTitle(`Użytkownik ${member.user.tag} został wyrzucony.`)
+				.setColor(0xFF0000)
+				.setTitle(`Użytkownik **${member.user.tag}** został wyrzucony.`)
 				.addField('Przez:',message.author.tag)
 				.addField('Powód:',reason)
 			)

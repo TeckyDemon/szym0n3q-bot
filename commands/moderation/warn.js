@@ -8,23 +8,23 @@ module.exports={
 		if(!member)
 			return message.channel.send('```Nie znaleziono użytkownika do ostrzeżenia.\nUżycie: !warn użytkownik powód```')
 		const reason=args.slice(1).join(' ')||'Brak'
+		database['users'][member.id]['warns']++
 		if(database['users'][member.id]['warns']==config.maxWarnings){
-			database['users'][member.id]['warns']=0
-			member.send(`Cześć, zostałeś wyrzucony z **${message.guild.name}**.\nPowód: ${reason}.`)
+			await member.send(`Cześć, zostałeś wyrzucony z **${message.guild.name}**.\nPrzez: **${message.author.tag}**\nPowód: **${reason}**.`).catch(()=>{})
 			member.kick(reason).then(()=>{
 				message.channel.send(new RichEmbed()
 					.setColor(0xFFFF00)
-					.setTitle(`Użytkownik ${member.user.tag} został wyrzucony.`)
+					.setTitle(`Użytkownik **${member.user.tag}** został wyrzucony.`)
 					.addField('Przez:',message.author.tag)
 					.addField('Powód:',reason)
 				)
 			})
+			database['users'][member.id]['warns']=0
 		}else{
-			database['users'][member.id]['warns']++
-			member.send(`Cześć, zostałeś ostrzeżony na **${message.guild.name}** po raz ${database['users'][member.id]['warns']}.`).catch()
+			await member.send(`Cześć, zostałeś ostrzeżony na **${message.guild.name}** po raz ${database['users'][member.id]['warns']}.\nPrzez: **${message.author.tag}**\nPowód: **${reason}**.`).catch(()=>{})
 			message.channel.send(new RichEmbed()
 				.setColor(0xFFFF00)
-				.setTitle(`Użytkownik ${member.user.tag} został ostrzeżony po raz ${database['users'][member.id]['warns']}.`)
+				.setTitle(`Użytkownik **${member.user.tag}** został ostrzeżony po raz ${database['users'][member.id]['warns']}.`)
 				.addField('Przez:',message.author.tag)
 				.addField('Powód:',reason)
 			)

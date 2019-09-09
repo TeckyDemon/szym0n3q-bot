@@ -1,14 +1,15 @@
 module.exports={
 	run:async(client,database,config,message,args)=>{
 		message.channel.send(`\`\`\`
-			!mute użytkownik powód - wycisza użytkownika
-			!unmute użytkownik - odcisza użytkownika
-			!kick użytkownik powód - wyrzuca użytkownika
 			!ban użytkownik powód - banuje użytkownika
+			!kick użytkownik powód - wyrzuca użytkownika
+			!mute użytkownik powód - wycisza użytkownika
 			!unban użytkownik - odbanowuje użytkownika
+			!unmute użytkownik - odcisza użytkownika
+			!unwarn użytkownik ilość - usuwa ostreżenia użytkownika
 			!warn użytkownik - ostrzega użytkownika
 			!info tekst - wyświetla informacje
-			!clear liczba - usuwa wiadomości
+			!clear ilość - usuwa wiadomości
 			\`\`\``.replace(/^\t+/mg,''))
 	}
 }

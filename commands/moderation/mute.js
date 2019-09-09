@@ -8,11 +8,11 @@ module.exports={
 		if(!member)
 			return message.channel.send('```Nie znaleziono użytkownika do wyciszenia.\nUżycie: !mute użytkownik powód```')
 		const reason=args.slice(1).join(' ')||'Brak'
-		member.send(`Cześć, zostałeś wyciszony na **${message.guild.name}**.`)
+		await member.send(`Cześć, zostałeś wyciszony na **${message.guild.name}**.\nPrzez: **${message.author.tag}**\nPowód: **${reason}**.`).catch(()=>{})
 		member.setMute(true,reason).then(()=>{
 			message.channel.send(new RichEmbed()
 				.setColor(0xFFFF00)
-				.setTitle(`Użytkownik ${member.user.tag} został wyciszony.`)
+				.setTitle(`Użytkownik **${member.user.tag}** został wyciszony.`)
 				.addField('Przez:',message.author.tag)
 				.addField('Powód:',reason)
 			)

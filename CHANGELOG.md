@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.1.0] - 2019-09-09
+
+### Added
+
+- [commands/moderation/unwarn.js](commands/moderation/unwarn.js) file.
+- Commands for owner.
+
+### Changed
+
+- Permissions.
+
+### Fixed
+
+- Error handling.
+
 ## [2.0.0] - 2019-09-08
 
 ### Added
