@@ -1,5 +1,5 @@
 module.exports={
-	run:async(client,database,config,message,args)=>{
+	run:async(message,args)=>{
 		message.channel.send(`\`\`\`
 			!ban użytkownik powód - banuje użytkownika
 			!kick użytkownik powód - wyrzuca użytkownika
@@ -10,6 +10,7 @@ module.exports={
 			!warn użytkownik - ostrzega użytkownika
 			!info tekst - wyświetla informacje
 			!clear ilość - usuwa wiadomości
+			!money - wyświetla ilość pieniędzy
 			\`\`\``.replace(/^\t+/mg,''))
 	}
 }

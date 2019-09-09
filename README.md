@@ -41,6 +41,7 @@
 | !clear **N**              | Clears **N** messages.              |
 | !help                     | Shows help message.                 |
 | !info **text**            | Prints **text** using emojis.       |
+| !money                    | Shows amount of money.              |
 | !dbsave                   | Saves database.                     |
 | !dbload                   | Loads database.                     |
 

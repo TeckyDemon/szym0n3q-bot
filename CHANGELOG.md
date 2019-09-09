@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file.
 
+## [3.0.0] - 2019-09-09
+
+### Added
+
+- [commands/other/money.js](commands/other/money.js) file.
+- [commands/owner/dbload.js][commands/owner/dbload.js] file.
+- [commands/owner/dbsave.js][commands/owner/dbsave.js] file.
+- Server currency.
+
+### Fixed
+
+- Loading database dynamically.
+
 ## [2.1.0] - 2019-09-09
 
 ### Added

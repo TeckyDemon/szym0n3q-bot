@@ -1,8 +1,8 @@
 const numberToWords=require('number-to-words')
 
 module.exports={
-	run:async(client,database,config,message,args)=>{
-		const content=args.join(' ')
+	run:async(message,args)=>{
+		const content=data['args'].join(' ')
 			.toLowerCase()
 			.replace('ą','a')
 			.replace('ć','c')

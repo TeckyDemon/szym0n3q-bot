@@ -1,7 +1,7 @@
 const {RichEmbed}=require("discord.js")
 
 module.exports={
-	run:async(client,database,config,message,args)=>{
+	run:async(data)=>{
 		if(!message.member.hasPermission(['ADMINISTRATOR']))
 			return message.channel.send('```Nie możesz użyć tej komendy.```')
 		const member=message.mentions.members.first()
