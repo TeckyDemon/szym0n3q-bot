@@ -11,6 +11,7 @@ module.exports={
 			!info tekst - wyświetla informacje
 			!clear ilość - usuwa wiadomości
 			!money - wyświetla ilość pieniędzy
+			!work - zarabia pieniądze
 			\`\`\``.replace(/^\t+/mg,''))
 	}
 }

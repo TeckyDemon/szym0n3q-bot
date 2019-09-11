@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [3.1.0] - 2019-09-11
+
+### Added
+
+- [commands/other/work.js](commands/other/work.js) file.
+
 ## [3.0.1] - 2019-09-11
 
 ### Added

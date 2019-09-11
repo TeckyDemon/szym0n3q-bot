@@ -58,6 +58,7 @@
 | !help                     | Shows help message.                 |
 | !info **text**            | Prints **text** using emojis.       |
 | !money                    | Shows amount of money.              |
+| !work                     | Gives user money for work.          |
 | !dbload                   | Loads database.                     |
 | !dbsave                   | Saves database.                     |
 
@@ -73,7 +74,10 @@
 	"currencySymbol" : "$",
 	"entryChannelID" : "ID",
 	"exitChannelID"  : "ID",
-	"maxWarnings"    : 2
+	"workChannelID"  : "ID",
+	"maxWarnings"    : 2,
+	"workWaitTime"   : 3600,
+	"workEarnings"   : 100
 }
 ```
 
@@ -85,7 +89,10 @@
 | currencySymbol | Symbol for server currency.                                                                                        |
 | entryChannelID | ID of channel where information about joining players will appear.                                                 |
 | exitChannelID  | ID of channel where information about leaving players will appear.                                                 |
+| workChannelID  | ID of channel where information about work will appear.                                                            |
 | maxWarnings    | Number of warnings after which user warned user will be kicked out from server.                                    |
+| workWaitTime   | Number of seconds before next time when user can use `!work` command.                                              |
+| workEarnings   | Amount of server currency that user will get for using `!work` command.                                            |
 
 ### database.json
 
@@ -93,17 +100,19 @@
 {
     "users": {
         "ID": {
-            "warns": 0,
-            "money": 100
+            "warns"    : 0,
+            "money"    : 100,
+			"nextWork" : 0
         }
 	}
 }
 ```
 
-| Key   | Description                        |
-| :---- | :--------------------------------- |
-| warns | Number of warnings that user have. |
-| money | Amount of money that user have.    |
+| Key      | Description                                |
+| :------- | :----------------------------------------- |
+| warns    | Number of warnings that user have.         |
+| money    | Amount of money that user have.            |
+| nextWork | Time when user will be able to work again. |
 
 ## Authors
 

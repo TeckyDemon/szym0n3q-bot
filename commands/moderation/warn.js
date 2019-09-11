@@ -2,11 +2,13 @@ const {RichEmbed}=require("discord.js")
 
 module.exports={
 	run:async(message,args)=>{
-		if(!message.member.hasPermission(['KICK_MEMBERS','ADMINISTRATOR']))
-			return message.channel.send('```Nie możesz użyć tej komendy.```')
+		if(!message.member.hasPermission(['KICK_MEMBERS','ADMINISTRATOR'])){
+			return message.channel.send(`**${message.author.tag}** nie możesz użyć tej komendy.`)
+		}
 		const member=message.mentions.members.first()
-		if(!member)
-			return message.channel.send('```Nie znaleziono użytkownika do ostrzeżenia.\nUżycie: !warn użytkownik powód```')
+		if(!member){
+			return message.channel.send(`**${message.author.tag}** nie znaleziono użytkownika do ostrzeżenia.\nUżycie: !warn użytkownik powód`)
+		}
 		const reason=args.slice(1).join(' ')||'Brak'
 		database['users'][member.id]['warns']++
 		if(database['users'][member.id]['warns']==config.maxWarnings){

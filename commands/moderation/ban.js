@@ -1,12 +1,14 @@
 const {RichEmbed}=require("discord.js")
 
 module.exports={
-	run:async(data)=>{
-		if(!message.member.hasPermission(['ADMINISTRATOR']))
-			return message.channel.send('```Nie możesz użyć tej komendy.```')
+	run:async(message,args)=>{
+		if(!message.member.hasPermission(['ADMINISTRATOR'])){
+			return message.channel.send(`**${message.author.tag}** nie możesz użyć tej komendy.`)
+		}
 		const member=message.mentions.members.first()
-		if(!member)
-			return message.channel.send('```Nie znaleziono użytkownika do zbanowania.\nUżycie: !ban użytkownik powód```')
+		if(!member){
+			return message.channel.send(`**${message.author.tag}** nie znaleziono użytkownika do zbanowania.\nUżycie: !ban użytkownik powód`)
+		}
 		const reason=args.slice(1).join(' ')||'Brak'
 		await member.send(`Cześć, zostałeś zbanowany na **${message.guild.name}**.\nPrzez: **${message.author.tag}**\nPowód: **${reason}**.`).catch(()=>{})
 		member.ban(reason).then(()=>{
@@ -17,7 +19,7 @@ module.exports={
 				.addField('Powód:',reason)
 			)
 		}).catch((err)=>{
-			message.channel.send('```Nie można zbanować tego użytkownika.```')
+			message.channel.send(`**${message.author.tag}** nie można zbanować użytkownika **${member.user.tag}**.`)
 			console.log(err)
 		})
 	}
