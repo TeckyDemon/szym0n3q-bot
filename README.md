@@ -22,10 +22,26 @@
 ## Content
 
 - [Content](#content)
+- [Requirements](#requirements)
+- [Installation](#installation)
 - [Documentation](#documentation)
+- [Templates](#templates)
+  - [config.json](#configjson)
+  - [database.json](#databasejson)
 - [Authors](#authors)
 - [Contact](#contact)
 - [License](#license)
+
+## Requirements
+
+- [glob](https://www.npmjs.com/package/glob)
+- [node-cron](https://www.npmjs.com/package/node-cron)
+- [discord.js](https://www.npmjs.com/package/discord.js)
+- [number-to-words](https://www.npmjs.com/package/number-to-words)
+
+## Installation
+
+`npm install glob node-cron discord.js number-to-words`
 
 ## Documentation
 
@@ -42,8 +58,52 @@
 | !help                     | Shows help message.                 |
 | !info **text**            | Prints **text** using emojis.       |
 | !money                    | Shows amount of money.              |
-| !dbsave                   | Saves database.                     |
 | !dbload                   | Loads database.                     |
+| !dbsave                   | Saves database.                     |
+
+## Templates
+
+### config.json
+
+```json
+{
+	"clientToken"    : "TOKEN",
+	"ownerID"        : "ID",
+	"commandPrefix"  : "!",
+	"currencySymbol" : "$",
+	"entryChannelID" : "ID",
+	"exitChannelID"  : "ID",
+	"maxWarnings"    : 2
+}
+```
+
+| Key            | Description                                                                                                        |
+| :------------- | :----------------------------------------------------------------------------------------------------------------- |
+| clientToken    | Token of your bot. You can find it here: [Application](https://discordapp.com/developers/applications/)->Bot->Copy |
+| ownerID        | Discord ID of bot owner.                                                                                           |
+| commandPrefix  | Command prefix for bot.                                                                                            |
+| currencySymbol | Symbol for server currency.                                                                                        |
+| entryChannelID | ID of channel where information about joining players will appear.                                                 |
+| exitChannelID  | ID of channel where information about leaving players will appear.                                                 |
+| maxWarnings    | Number of warnings after which user warned user will be kicked out from server.                                    |
+
+### database.json
+
+```json
+{
+    "users": {
+        "ID": {
+            "warns": 0,
+            "money": 100
+        }
+	}
+}
+```
+
+| Key   | Description                        |
+| :---- | :--------------------------------- |
+| warns | Number of warnings that user have. |
+| money | Amount of money that user have.    |
 
 ## Authors
 

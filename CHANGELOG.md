@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [3.0.1] - 2019-09-11
+
+### Added
+
+##### [README.md](README.md)
+
+- `Installation`, `Requirements` and `Templates` sections.
+
 ## [3.0.0] - 2019-09-09
 
 ### Added
