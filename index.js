@@ -21,8 +21,9 @@ client.on('guildMemberAdd',async member=>{
 	channel.send(`Cześć **${member.user.tag}**, baw się dobrze:hugging: :tada:`)
 	if(!member.user.bot&&!database['users'][member.id]){
 		database['users'][member.id]={
-			warns : 0,
-			money : 100
+			warns    : 0,
+			money    : 100,
+			nextWork : 0
 		}
 	}
 })

@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [3.1.1] - 2019-09-12
+
+### Fixed
+
+##### [index.js](index.js)
+
+- New user creation.
+
 ## [3.1.0] - 2019-09-11
 
 ### Added
