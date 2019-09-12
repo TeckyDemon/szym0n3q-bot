@@ -13,7 +13,7 @@ module.exports={
 		await member.send(`Cześć, zostałeś odciszony na **${message.guild.name}**.\nPrzez: **${message.author.tag}**`).catch(()=>{})
 		member.setMute(false,reason).then(()=>{
 			message.channel.send(new RichEmbed()
-				.setColor(0xFFFF00)
+				.setColor(0x00FF00)
 				.setTitle(`Użytkownik **${message.author.tag}** został odciszony.`)
 				.addField('Przez:',message.author.tag)
 				.addField('Powód:',reason)

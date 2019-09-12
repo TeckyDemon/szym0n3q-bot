@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## [3.1.2] - 2019-09-12
+
+### Fixed
+
+##### [commands/moderation/ban.js](commands/moderation/ban.js)
+
+- Colors.
+
+##### [commands/moderation/unmute.js](commands/moderation/unmute.js)
+
+- Colors.
+
 ## [3.1.1] - 2019-09-12
 
 ### Fixed

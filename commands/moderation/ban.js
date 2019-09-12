@@ -13,7 +13,7 @@ module.exports={
 		await member.send(`Cześć, zostałeś zbanowany na **${message.guild.name}**.\nPrzez: **${message.author.tag}**\nPowód: **${reason}**.`).catch(()=>{})
 		member.ban(reason).then(()=>{
 			message.channel.send(new RichEmbed()
-				.setColor(0xFFFF00)
+				.setColor(0xFF0000)
 				.setTitle(`Użytkownik **${member.user.tag}** został zbanowany.`)
 				.addField('Przez:',message.author.tag)
 				.addField('Powód:',reason)
