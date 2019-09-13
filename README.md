@@ -77,7 +77,13 @@
 	"workChannelID"  : "ID",
 	"maxWarnings"    : 2,
 	"workWaitTime"   : 3600,
-	"workEarnings"   : 100
+	"workEarnings"   : 100,
+	"autoRoles"      : [
+		{
+			"emoji" : "roleID",
+			"emoji" : "roleID"
+		}
+	]
 }
 ```
 
@@ -93,6 +99,7 @@
 | maxWarnings    | Number of warnings after which user warned user will be kicked out from server.                                    |
 | workWaitTime   | Number of seconds before next time when user can use `!work` command.                                              |
 | workEarnings   | Amount of server currency that user will get for using `!work` command.                                            |
+| autoRoles      | Groups of roles.                                                                                                   |
 
 ### database.json
 

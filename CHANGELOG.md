@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [4.0.0] - 2019-09-14
+
+### Added
+
+##### [index.js](index.js)
+
+- Auto-roles.
+
 ## [3.2.0] - 2019-09-13
 
 ### Added
