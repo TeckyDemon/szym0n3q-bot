@@ -34,6 +34,13 @@ client.on('guildMemberRemove',async member=>{
 })
 client.on('message',async message=>{
 	if(!message.guild)return
+	if(!message.author.bot){
+		database['messages'][message.channel.id][message.id]={
+			'timestamp' : message.createdTimestamp,
+			'author'    : message.author.id,
+			'content'   : message.content
+		}
+	}
 	if(message.content[0]===config.commandPrefix){
 		const content=message.content.slice(1).split(' ')
 		const command=content[0]

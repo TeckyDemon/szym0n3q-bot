@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [3.2.0] - 2019-09-13
+
+### Added
+
+##### [index.js](index.js)
+
+- Full message logging.
+
 ## [3.1.2] - 2019-09-12
 
 ### Fixed
