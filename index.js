@@ -17,14 +17,16 @@ cron.schedule('0 */1 * * *',()=>{
 })
 client.on('messageReactionAdd',async (reaction,user)=>{
 	if(user.id==config.ownerID)return
+	if(reaction.message.channel.id!=config.autoRolesChannelID)return
 	const member=reaction.message.guild.member(user)
 	const roleGroup=config.autoRoles.find(g=>reaction._emoji.name in g)
-	await reaction.message.reactions.filter(r=>r!=reaction).map(r=>r.remove(user))
+	await reaction.message.reactions.filter(r=>r!=reaction&&r._emoji.name in roleGroup).map(r=>r.remove(user))
 	await member.removeRoles(Object.values(roleGroup))
 	await member.addRole(roleGroup[reaction._emoji.name])
 })
 client.on('messageReactionRemove',async (reaction,user)=>{
 	if(user.id==config.ownerID)return
+	if(reaction.message.channel.id!=config.autoRolesChannelID)return
 	const member=reaction.message.guild.member(user)
 	await member.removeRole(config.autoRoles.find(g=>reaction._emoji.name in g)[reaction._emoji.name])
 })

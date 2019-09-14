@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [4.0.1] - 2019-09-14
+
+### Fixed
+
+##### [index.js](index.js)
+
+- Role groups bug.
+
 ## [4.0.0] - 2019-09-14
 
 ### Added

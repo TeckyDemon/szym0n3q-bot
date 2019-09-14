@@ -68,38 +68,41 @@
 
 ```json
 {
-	"clientToken"    : "TOKEN",
-	"ownerID"        : "ID",
-	"commandPrefix"  : "!",
-	"currencySymbol" : "$",
-	"entryChannelID" : "ID",
-	"exitChannelID"  : "ID",
-	"workChannelID"  : "ID",
-	"maxWarnings"    : 2,
-	"workWaitTime"   : 3600,
-	"workEarnings"   : 100,
-	"autoRoles"      : [
+	"clientToken"        : "TOKEN",
+	"ownerID"            : "ID",
+	"commandPrefix"      : "!",
+	"currencySymbol"     : "$",
+	"entryChannelID"     : "ID",
+	"exitChannelID"      : "ID",
+	"workChannelID"      : "ID",
+	"maxWarnings"        : 2,
+	"workWaitTime"       : 3600,
+	"workEarnings"       : 100,
+	"autoRolesChannelID" : "ID",
+	"autoRoles" : [
 		{
 			"emoji" : "roleID",
 			"emoji" : "roleID"
-		}
+		},
+		{"emoji" : "roleID"}
 	]
 }
 ```
 
-| Key            | Description                                                                                                        |
-| :------------- | :----------------------------------------------------------------------------------------------------------------- |
-| clientToken    | Token of your bot. You can find it here: [Application](https://discordapp.com/developers/applications/)->Bot->Copy |
-| ownerID        | Discord ID of bot owner.                                                                                           |
-| commandPrefix  | Command prefix for bot.                                                                                            |
-| currencySymbol | Symbol for server currency.                                                                                        |
-| entryChannelID | ID of channel where information about joining players will appear.                                                 |
-| exitChannelID  | ID of channel where information about leaving players will appear.                                                 |
-| workChannelID  | ID of channel where information about work will appear.                                                            |
-| maxWarnings    | Number of warnings after which user warned user will be kicked out from server.                                    |
-| workWaitTime   | Number of seconds before next time when user can use `!work` command.                                              |
-| workEarnings   | Amount of server currency that user will get for using `!work` command.                                            |
-| autoRoles      | Groups of roles.                                                                                                   |
+| Key                | Description                                                                                                        |
+| :----------------- | :----------------------------------------------------------------------------------------------------------------- |
+| clientToken        | Token of your bot. You can find it here: [Application](https://discordapp.com/developers/applications/)->Bot->Copy |
+| ownerID            | Discord ID of bot owner.                                                                                           |
+| commandPrefix      | Command prefix for bot.                                                                                            |
+| currencySymbol     | Symbol for server currency.                                                                                        |
+| entryChannelID     | ID of channel where information about joining players will appear.                                                 |
+| exitChannelID      | ID of channel where information about leaving players will appear.                                                 |
+| workChannelID      | ID of channel where information about work will appear.                                                            |
+| maxWarnings        | Number of warnings after which user warned user will be kicked out from server.                                    |
+| workWaitTime       | Number of seconds before next time when user can use `!work` command.                                              |
+| workEarnings       | Amount of server currency that user will get for using `!work` command.                                            |
+| autoRolesChannelID | ID of channel with auto-roles.                                                                                     |
+| autoRoles          | Groups of roles.                                                                                                   |
 
 ### database.json
 
