@@ -78,8 +78,8 @@ client.on('message',async message=>{
 		const content=message.content.slice(1).split(' ')
 		const command=content[0]
 		const args=content.slice(1)
-		message.delete()
 		if(command in commands){
+			message.delete()
 			commands[command].run(message,args)
 		}
 	}

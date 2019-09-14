@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [4.0.2] - 2019-09-14
+
+### Fixed
+
+##### [index.js](index.js)
+
+- Automatically removed messages bug.
+
 ## [4.0.1] - 2019-09-14
 
 ### Fixed
