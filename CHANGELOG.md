@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [4.0.4] - 2019-09-15
+
+### Added
+
+##### [index.js](index.js)
+
+- Automatically adding new channel to database.
+
 ## [4.0.3] - 2019-09-15
 
 ### Added

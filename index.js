@@ -15,38 +15,10 @@ glob('commands/**/*.js',(err,files)=>{
 cron.schedule('0 */1 * * *',()=>{
 	writeFile('database.json',JSON.stringify(database,null,4),function(){})
 })
-client.on('messageReactionAdd',async (reaction,user)=>{
-	if(user.id==config.ownerID)return
-	if(reaction.message.channel.id!=config.autoRolesChannelID)return
-	const member=reaction.message.guild.member(user)
-	const roleGroup=config.autoRoles.find(g=>reaction._emoji.name in g)
-	await reaction.message.reactions.filter(r=>r!=reaction&&r._emoji.name in roleGroup).map(r=>r.remove(user))
-	await member.removeRoles(Object.values(roleGroup))
-	await member.addRole(roleGroup[reaction._emoji.name])
-})
-client.on('messageReactionRemove',async (reaction,user)=>{
-	if(user.id==config.ownerID)return
-	if(reaction.message.channel.id!=config.autoRolesChannelID)return
-	const member=reaction.message.guild.member(user)
-	await member.removeRole(config.autoRoles.find(g=>reaction._emoji.name in g)[reaction._emoji.name])
-})
-client.on('raw',packet=>{
-	if(!['MESSAGE_REACTION_ADD','MESSAGE_REACTION_REMOVE'].includes(packet.t))return
-	const channel=client.channels.get(packet.d.channel_id)
-	if(channel.messages.has(packet.d.message_id))return
-	channel.fetchMessage(packet.d.message_id).then(message=>{
-		const emoji=packet.d.emoji.id?`${packet.d.emoji.name}:${packet.d.emoji.id}`:packet.d.emoji.name
-		const reaction=message.reactions.get(emoji)
-		if(reaction)reaction.users.set(packet.d.user_id, client.users.get(packet.d.user_id))
-		switch(packet.t){
-			case 'MESSAGE_REACTION_ADD':
-				client.emit('messageReactionAdd',reaction,client.users.get(packet.d.user_id))
-				break
-			case 'MESSAGE_REACTION_REMOVE':
-				client.emit('messageReactionRemove',reaction,client.users.get(packet.d.user_id))
-				break
-		}
-    })
+client.on('channelCreate',async channel=>{
+	if(channel.type=='text'){
+		database['messages'][channel.id]={}
+	}
 })
 client.on('guildMemberAdd',async member=>{
 	const channel=member.guild.channels.find(ch=>ch.id===config.entryChannelID)
@@ -83,6 +55,39 @@ client.on('message',async message=>{
 			commands[command].run(message,args)
 		}
 	}
+})
+client.on('messageReactionAdd',async (reaction,user)=>{
+	if(user.id==config.ownerID)return
+	if(reaction.message.channel.id!=config.autoRolesChannelID)return
+	const member=reaction.message.guild.member(user)
+	const roleGroup=config.autoRoles.find(g=>reaction._emoji.name in g)
+	await reaction.message.reactions.filter(r=>r!=reaction&&r._emoji.name in roleGroup).map(r=>r.remove(user))
+	await member.removeRoles(Object.values(roleGroup))
+	await member.addRole(roleGroup[reaction._emoji.name])
+})
+client.on('messageReactionRemove',async (reaction,user)=>{
+	if(user.id==config.ownerID)return
+	if(reaction.message.channel.id!=config.autoRolesChannelID)return
+	const member=reaction.message.guild.member(user)
+	await member.removeRole(config.autoRoles.find(g=>reaction._emoji.name in g)[reaction._emoji.name])
+})
+client.on('raw',packet=>{
+	if(!['MESSAGE_REACTION_ADD','MESSAGE_REACTION_REMOVE'].includes(packet.t))return
+	const channel=client.channels.get(packet.d.channel_id)
+	if(channel.messages.has(packet.d.message_id))return
+	channel.fetchMessage(packet.d.message_id).then(message=>{
+		const emoji=packet.d.emoji.id?`${packet.d.emoji.name}:${packet.d.emoji.id}`:packet.d.emoji.name
+		const reaction=message.reactions.get(emoji)
+		if(reaction)reaction.users.set(packet.d.user_id, client.users.get(packet.d.user_id))
+		switch(packet.t){
+			case 'MESSAGE_REACTION_ADD':
+				client.emit('messageReactionAdd',reaction,client.users.get(packet.d.user_id))
+				break
+			case 'MESSAGE_REACTION_REMOVE':
+				client.emit('messageReactionRemove',reaction,client.users.get(packet.d.user_id))
+				break
+		}
+    })
 })
 
 client.login(config.clientToken)
