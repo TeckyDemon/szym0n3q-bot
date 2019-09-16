@@ -3,7 +3,6 @@ module.exports={
 		const channel=message.guild.channels.find(ch=>ch.id===config.workChannelID)
 		if(!channel)return
 		let difference=Math.abs(database['users'][message.member.id]['nextWork']-Date.now())/1000
-		console.log(difference,config.workWaitTime)
 		if(difference>config.workWaitTime){
 			if(database['users'][message.member.id]['money']!='∞'){
 				database['users'][message.member.id]['money']+=config.workEarnings

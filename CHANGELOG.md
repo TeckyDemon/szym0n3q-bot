@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [4.0.5] - 2019-09-16
+
+### Removed
+
+##### [commands/other/work.js](commands/other/work.js)
+
+- Unnecessary code.
+
 ## [4.0.4] - 2019-09-15
 
 ### Added
