@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [4.0.6] - 2019-09-16
+
+### Changed
+
+##### [index.js](index.js)
+
+- Cron expression for database saving.
+
 ## [4.0.5] - 2019-09-16
 
 ### Removed

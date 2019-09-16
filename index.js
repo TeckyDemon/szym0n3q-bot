@@ -12,7 +12,7 @@ glob('commands/**/*.js',(err,files)=>{
 	else files.map(x=>commands[basename(x,'.js')]=require(`./${x}`))
 })
 
-cron.schedule('0 */1 * * *',()=>{
+cron.schedule('0 * * * *',()=>{
 	writeFile('database.json',JSON.stringify(database,null,4),function(){})
 })
 client.on('channelCreate',async channel=>{
