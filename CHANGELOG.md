@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [5.0.5] - 2019-09-17
+
+### Fixed
+
+##### [commands/moderation/unban.js](commands/moderation/unban.js)
+
+- Command.
+
 ## [5.0.4] - 2019-09-17
 
 ### Fixed
