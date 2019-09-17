@@ -21,6 +21,7 @@ client.on('channelCreate',async channel=>{
 	}
 })
 client.on('guildMemberAdd',async member=>{
+	if(member.user.bot)return
 	const channel=member.guild.channels.find(ch=>ch.id===config.entryChannelID)
 	if(!channel)return
 	channel.send(`Witaj **${member.user.tag}** na serwerze BMP. :tada:  Zapoznaj się z #:page_facing_up:regulamin :smile:`)
@@ -33,6 +34,7 @@ client.on('guildMemberAdd',async member=>{
 	}
 })
 client.on('guildMemberRemove',async member=>{
+	if(member.user.bot)return
 	const channel=member.guild.channels.find(ch=>ch.id===config.exitChannelID)
 	if(!channel)return
 	channel.send(`**${member.user.tag}** wyszedł z serwera BMP:frowning2: . Mamy nadzieję że jeszcze wróci:smile:`)
