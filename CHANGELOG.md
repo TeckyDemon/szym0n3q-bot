@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [5.0.2] - 2019-09-17
+
+### Changed
+
+##### [index.js](index.js)
+
+- Farewell message.
+
 ## [5.0.1] - 2019-09-17
 
 ### Changed

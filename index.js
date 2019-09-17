@@ -35,7 +35,7 @@ client.on('guildMemberAdd',async member=>{
 client.on('guildMemberRemove',async member=>{
 	const channel=member.guild.channels.find(ch=>ch.id===config.exitChannelID)
 	if(!channel)return
-	channel.send(`**${member.user.tag}** zjadł zgniłego ziemniaka i sobie poszedł :frowning2:`)
+	channel.send(`**${member.user.tag}** wyszedł z serwera BMP:frowning2: . Mamy nadzieję że jeszcze wróci:smile:`)
 })
 client.on('message',async message=>{
 	if(!message.guild)return
