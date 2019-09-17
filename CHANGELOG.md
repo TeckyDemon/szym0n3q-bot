@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## [5.0.6] - 2019-09-17
+
+### Changed
+
+##### [commands/other/money.js](commands/other/money.js)
+
+- Moved file to [commands/economy/money.js](commands/economy/money.js)
+
+##### [commands/other/work.js](commands/other/work.js)
+
+- Moved file to [commands/economy/work.js](commands/economy/work.js)
+
 ## [5.0.5] - 2019-09-17
 
 ### Fixed
