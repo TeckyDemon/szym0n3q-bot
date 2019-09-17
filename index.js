@@ -24,7 +24,7 @@ client.on('guildMemberAdd',async member=>{
 	if(member.user.bot)return
 	const channel=member.guild.channels.find(ch=>ch.id===config.entryChannelID)
 	if(!channel)return
-	channel.send(`Witaj **${member.user.tag}** na serwerze BMP. :tada:  Zapoznaj się z #:page_facing_up:regulamin :smile:`)
+	channel.send(`Witaj **${member.user.tag}** na serwerze BMP. :tada:  Zapoznaj się z <#611515506586943508> :smile:`)
 	if(!member.user.bot&&!database['users'][member.id]){
 		database['users'][member.id]={
 			'warns'    : 0,
