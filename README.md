@@ -1,23 +1,23 @@
-# Szym0n3Q Team Bot
+# BMP_bot
 
-![GitHub](https://img.shields.io/github/license/DeBos99/szym0n3q-team-bot.svg?color=2020cc&labelColor=5050ff&style=for-the-badge)
+![GitHub](https://img.shields.io/github/license/DeBos99/bmp_bot.svg?color=2020cc&labelColor=5050ff&style=for-the-badge)
 ![GitHub followers](https://img.shields.io/github/followers/DeBos99.svg?color=2020cc&labelColor=5050ff&style=for-the-badge)
-![GitHub forks](https://img.shields.io/github/forks/DeBos99/szym0n3q-team-bot.svg?color=2020cc&labelColor=5050ff&style=for-the-badge)
-![GitHub stars](https://img.shields.io/github/stars/DeBos99/szym0n3q-team-bot.svg?color=2020cc&labelColor=5050ff&style=for-the-badge)
-![GitHub watchers](https://img.shields.io/github/watchers/DeBos99/szym0n3q-team-bot.svg?color=2020cc&labelColor=5050ff&style=for-the-badge)
-![GitHub contributors](https://img.shields.io/github/contributors/DeBos99/szym0n3q-team-bot.svg?color=2020cc&labelColor=5050ff&style=for-the-badge)
+![GitHub forks](https://img.shields.io/github/forks/DeBos99/bmp_bot.svg?color=2020cc&labelColor=5050ff&style=for-the-badge)
+![GitHub stars](https://img.shields.io/github/stars/DeBos99/bmp_bot.svg?color=2020cc&labelColor=5050ff&style=for-the-badge)
+![GitHub watchers](https://img.shields.io/github/watchers/DeBos99/bmp_bot.svg?color=2020cc&labelColor=5050ff&style=for-the-badge)
+![GitHub contributors](https://img.shields.io/github/contributors/DeBos99/bmp_bot.svg?color=2020cc&labelColor=5050ff&style=for-the-badge)
 
-![GitHub commit activity](https://img.shields.io/github/commit-activity/w/DeBos99/szym0n3q-team-bot.svg?color=ffaa00&labelColor=ffaa30&style=for-the-badge)
-![GitHub commit activity](https://img.shields.io/github/commit-activity/m/DeBos99/szym0n3q-team-bot.svg?color=ffaa00&labelColor=ffaa30&style=for-the-badge)
-![GitHub commit activity](https://img.shields.io/github/commit-activity/y/DeBos99/szym0n3q-team-bot.svg?color=ffaa00&labelColor=ffaa30&style=for-the-badge)
-![GitHub last commit](https://img.shields.io/github/last-commit/DeBos99/szym0n3q-team-bot.svg?color=ffaa00&labelColor=ffaa30&style=for-the-badge)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/w/DeBos99/bmp_bot.svg?color=ffaa00&labelColor=ffaa30&style=for-the-badge)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/DeBos99/bmp_bot.svg?color=ffaa00&labelColor=ffaa30&style=for-the-badge)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/y/DeBos99/bmp_bot.svg?color=ffaa00&labelColor=ffaa30&style=for-the-badge)
+![GitHub last commit](https://img.shields.io/github/last-commit/DeBos99/bmp_bot.svg?color=ffaa00&labelColor=ffaa30&style=for-the-badge)
 
-![GitHub issues](https://img.shields.io/github/issues-raw/DeBos99/szym0n3q-team-bot.svg?color=cc2020&labelColor=ff3030&style=for-the-badge)
-![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/DeBos99/szym0n3q-team-bot.svg?color=10aa10&labelColor=30ff30&style=for-the-badge)
+![GitHub issues](https://img.shields.io/github/issues-raw/DeBos99/bmp_bot.svg?color=cc2020&labelColor=ff3030&style=for-the-badge)
+![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/DeBos99/bmp_bot.svg?color=10aa10&labelColor=30ff30&style=for-the-badge)
 
 [![Donate](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=NH8JV53DSVDMY)
 
-**Szym0n3Q Team Bot** is Discord bot made for [Szym0n3q Team](https://discord.gg/XsRgqzK) server.
+**BMP_bot** is Discord bot made for [BMP_team](https://discord.gg/XsRgqzK) server.
 
 ## Content
 
