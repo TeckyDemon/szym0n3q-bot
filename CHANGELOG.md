@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [5.0.7] - 2019-09-23
+
+### Added
+
+##### [README.md](README.md)
+
+- [Features](https://github.com/DeBos99/bmp_bot#features) section.
+
 ## [5.0.6] - 2019-09-17
 
 ### Changed
