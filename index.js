@@ -27,9 +27,10 @@ client.on('guildMemberAdd',async member=>{
 	channel.send(`Witaj **${member.user.tag}** na serwerze BMP. :tada:  Zapoznaj się z <#611515506586943508> :smile:`)
 	if(!member.user.bot&&!database['users'][member.id]){
 		database['users'][member.id]={
-			'warns'    : 0,
-			'money'    : 100,
-			'nextWork' : 0
+			'warns'     : 0,
+			'money'     : 100,
+			'nextWork'  : 0,
+			'workBonus' : 1.0
 		}
 	}
 })

@@ -4,11 +4,9 @@ module.exports={
 		if(!channel)return
 		let difference=Math.abs(database['users'][message.member.id]['nextWork']-Date.now())/1000
 		if(difference>config.workWaitTime){
-			if(database['users'][message.member.id]['money']!='∞'){
-				database['users'][message.member.id]['money']+=config.workEarnings
-			}
+			database['users'][message.member.id]['money']+=config.workEarnings*database['users'][message.member.id]['workBonus']
 			database['users'][message.member.id]['nextWork']=Date.now()+config.workWaitTime
-			channel.send(`**${message.author.tag}** zarobiłeś ${config.workEarnings}${config.currencySymbol}`)
+			channel.send(`**${message.author.tag}** zarobiłeś ${config.workEarnings*database['users'][message.member.id]['workBonus']}${config.currencySymbol}`)
 		}else{
 			channel.send(`**${message.author.tag}** możesz pracować raz na godzinę.`)
 		}

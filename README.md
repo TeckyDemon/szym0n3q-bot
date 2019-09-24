@@ -62,7 +62,9 @@
 | !clear **N**              | Clears **N** messages.              |
 | !help                     | Shows help message.                 |
 | !info **text**            | Prints **text** using emojis.       |
+| !buy **item**             | Buys **item** from shop.            |
 | !money                    | Shows amount of money.              |
+| !shop                     | Shows shop.                         |
 | !work                     | Gives user money for work.          |
 | !dbload                   | Loads database.                     |
 | !dbsave                   | Saves database.                     |
@@ -84,12 +86,31 @@
 	"workWaitTime"       : 3600,
 	"workEarnings"       : 100,
 	"autoRolesChannelID" : "ID",
-	"autoRoles" : [
+	"autoRoles"          : [
 		{
 			"emoji" : "roleID",
 			"emoji" : "roleID"
 		},
 		{"emoji" : "roleID"}
+	],
+	"shopChannelID"      : "ID",
+	"shop"               : [
+		{
+			"ID" : {
+				"cost"      : 1000,
+				"workBonus" : 1.25
+			},
+			"ID" : {
+				"cost"      : 2000,
+				"workBonus" : 1.75
+			}
+		},
+		{
+			"ID" : {
+				"cost"      : 1500,
+				"workBonus" : 1.50
+			}
+		}
 	]
 }
 ```
@@ -108,6 +129,8 @@
 | workEarnings       | Amount of server currency that user will get for using `!work` command.                                            |
 | autoRolesChannelID | ID of channel with auto-roles.                                                                                     |
 | autoRoles          | Groups of roles.                                                                                                   |
+| shopChannelID      | ID of channel with shop.                                                                                           |
+| shop               | List of shop items.                                                                                                |
 
 ### database.json
 
@@ -115,19 +138,21 @@
 {
     "users": {
         "ID": {
-            "warns"    : 0,
-            "money"    : 100,
-			"nextWork" : 0
+            "warns"     : 0,
+            "money"     : 100,
+			"nextWork"  : 0,
+			"workBonus" : 1
         }
 	}
 }
 ```
 
-| Key      | Description                                |
-| :------- | :----------------------------------------- |
-| warns    | Number of warnings that user have.         |
-| money    | Amount of money that user have.            |
-| nextWork | Time when user will be able to work again. |
+| Key       | Description                                |
+| :-------- | :----------------------------------------- |
+| warns     | Number of warnings that user have.         |
+| money     | Amount of money that user have.            |
+| nextWork  | Time when user will be able to work again. |
+| workBonus | Work earnings multiplier.                  |
 
 ## Authors
 

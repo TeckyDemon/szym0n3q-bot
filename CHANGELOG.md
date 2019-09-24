@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## [6.0.0] - 2019-09-24
+
+### Added
+
+- [commands/economy/buy.js](commands/economy/buy.js) file.
+- [commands/economy/shop.js](commands/economy/shop.js) file.
+
+##### [commands/economy/work.js](commands/economy/work.js)
+
+- Work bonus.
+
 ## [5.0.7] - 2019-09-23
 
 ### Added

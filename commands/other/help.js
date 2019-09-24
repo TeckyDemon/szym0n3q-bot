@@ -8,9 +8,11 @@ module.exports={
 			!unmute użytkownik - odcisza użytkownika
 			!unwarn użytkownik ilość - usuwa ostreżenia użytkownika
 			!warn użytkownik - ostrzega użytkownika
-			!info tekst - wyświetla informacje
 			!clear ilość - usuwa wiadomości
+			!info tekst - wyświetla informacje
+			!buy przedmiot - kupuje przedmiot
 			!money - wyświetla ilość pieniędzy
+			!shop - wyświetla sklep
 			!work - zarabia pieniądze
 			\`\`\``.replace(/^\t+/mg,''))
 	}
