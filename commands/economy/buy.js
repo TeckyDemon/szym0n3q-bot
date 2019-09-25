@@ -10,9 +10,9 @@ module.exports={
 						database['users'][message.member.id]['workBonus']=group[id].workBonus
 						await message.member.removeRoles(Object.keys(group))
 						await message.member.addRole(id)
-						message.channel.send(`**${message.author.tag}** zakupiłeś rangę **${message.guild.roles.find(r=>r.id==id).name}**.`)
+						channel.send(`**${message.author.tag}** zakupiłeś rangę **${message.guild.roles.find(r=>r.id==id).name}**.`)
 					}else{
-						message.channel.send(`**${message.author.tag}** nie masz tyle ${config.currencySymbol}.`)
+						channel.send(`**${message.author.tag}** nie masz tyle ${config.currencySymbol}.`)
 					}
 					break
 				}

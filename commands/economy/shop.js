@@ -9,6 +9,6 @@ module.exports={
 			}
 			lines.push('')
 		}
-		message.channel.send(lines.join('\n'))
+		channel.send(lines.join('\n'))
 	}
 }

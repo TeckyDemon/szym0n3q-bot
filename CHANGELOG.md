@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [6.0.1] - 2019-09-25
+
+### Fixed
+
+- Economy messages channels.
+
 ## [6.0.0] - 2019-09-24
 
 ### Added
