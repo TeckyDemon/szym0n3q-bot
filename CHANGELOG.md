@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [6.0.2] - 2019-09-26
+
+### Fixed
+
+##### [commands/other/info.js](commands/other/info.js)
+
+- `!info` command.
+
 ## [6.0.1] - 2019-09-25
 
 ### Fixed

@@ -2,7 +2,7 @@ const numberToWords=require('number-to-words')
 
 module.exports={
 	run:async(message,args)=>{
-		const content=data['args'].join(' ')
+		const content=args.join(' ')
 			.toLowerCase()
 			.replace('ą','a')
 			.replace('ć','c')
