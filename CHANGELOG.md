@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [6.0.3] - 2019-09-28
+
+### Changed
+
+##### [.gitignore](.gitignore)
+
+- .json files pattern.
+
 ## [6.0.2] - 2019-09-26
 
 ### Fixed
