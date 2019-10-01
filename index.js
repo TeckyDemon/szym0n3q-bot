@@ -24,7 +24,7 @@ client.on('guildMemberAdd',async member=>{
 	if(member.user.bot)return
 	const channel=member.guild.channels.find(ch=>ch.id===config.entryChannelID)
 	if(!channel)return
-	channel.send(`Witaj **${member.user.tag}** na serwerze BMP. :tada:  Zapoznaj się z <#611515506586943508> :smile:`)
+	channel.send(`Witaj **${member.user.tag}** zapoznaj się z <#611515506586943508> i baw się dobrze :hugging: :tada:`)
 	if(!member.user.bot&&!database['users'][member.id]){
 		database['users'][member.id]={
 			'warns'     : 0,
@@ -38,7 +38,7 @@ client.on('guildMemberRemove',async member=>{
 	if(member.user.bot)return
 	const channel=member.guild.channels.find(ch=>ch.id===config.exitChannelID)
 	if(!channel)return
-	channel.send(`**${member.user.tag}** wyszedł z serwera BMP:frowning2: . Mamy nadzieję że jeszcze wróci:smile:`)
+	channel.send(`**${member.user.tag}** wyszedł z serwera:slight_frown:. Mamy nadzieję że jeszcze wróci :smile:.`)
 })
 client.on('message',async message=>{
 	if(!message.guild)return

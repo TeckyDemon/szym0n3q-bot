@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [7.0.0] - 2019-10-01
+
+### Changed
+
+- Project name to `Szym0n3Q BOT`.
+
 ## [6.0.3] - 2019-09-28
 
 ### Changed
